@@ -5,9 +5,9 @@ function Hit({ hits }) {
     console.log("DELETE ME: ", entry);
   }
   return (
-    <li>
+    <>
       {hits?.map(({ name, address, city, postal_code, state, objectID }) => (
-        <>
+        <li>
           <span style={{ "font-weight": "700" }}>{name}</span>
           {address}, {city} {state} {postal_code}
           <button
@@ -18,9 +18,9 @@ function Hit({ hits }) {
           >
             DEL "{name?.slice(0, 5)}.." (ID: {objectID})
           </button>
-        </>
+        </li>
       ))}
-    </li>
+    </>
   );
 }
 
