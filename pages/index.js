@@ -5,10 +5,9 @@ import ReactDOM from "react-dom";
 import algoliasearch from "algoliasearch/lite";
 import { InstantSearch, SearchBox, Hits } from "react-instantsearch-dom";
 
-const searchClient = algoliasearch(
-  process.env.ALGOLIA_APP_ID,
-  process.env.ALGOLIA_API_KEY
-);
+const ALGOLIA_APP_ID = process.env.ALGOLIA_APP_ID;
+const ALGOLIA_API_KEY = process.env.ALGOLIA_API_KEY;
+const searchClient = algoliasearch(ALGOLIA_APP_ID, ALGOLIA_API_KEY);
 export default function Home() {
   return (
     <div className="container">
