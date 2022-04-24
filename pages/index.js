@@ -1,23 +1,36 @@
-import Head from 'next/head'
-import Header from '@components/Header'
-import Footer from '@components/Footer'
+import Head from "next/head";
+import Footer from "@components/Footer";
+import React from "react";
+import ReactDOM from "react-dom";
+import algoliasearch from "algoliasearch/lite";
+import { InstantSearch, SearchBox, Hits } from "react-instantsearch-dom";
 
+const searchClient = algoliasearch(
+  "latency",
+  "6be0576ff61c053d5f9a3225e2a90f76"
+);
 export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Next.js Starter!</title>
+        <title>Front-End Software Engineer Hiring Assignment</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <Header title="Welcome to my app!" />
         <p className="description">
-          Get started by editing <code>pages/index.js</code>
+          Get started by searching for a restaurant:
         </p>
+        <InstantSearch
+          indexName="new-index-1650761562_query_suggestions"
+          searchClient={searchClient}
+        >
+          <SearchBox />
+          <Hits />
+        </InstantSearch>
       </main>
 
       <Footer />
     </div>
-  )
+  );
 }
