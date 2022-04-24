@@ -1,8 +1,11 @@
 import { connectInfiniteHits } from "react-instantsearch-dom";
+import { algoliaIndexApi } from "../pages/index";
 
 function Hit({ hits }) {
-  function deleteEntry(entry) {
-    console.log("DELETE ME: ", entry);
+  function deleteEntry(entryId) {
+    console.log("DELETE ME: ", entryId);
+    // TODO: Uncomment once using env variables to pass an admin API key
+    //algoliaIndexApi.deleteObject(entryId);
   }
   return (
     <>

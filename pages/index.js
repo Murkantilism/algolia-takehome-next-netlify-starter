@@ -12,7 +12,10 @@ import CustomHit from "../components/Hit";
 
 const ALGOLIA_APP_ID = "QP39CFZYBC";
 const ALGOLIA_PUBLIC_KEY = "38ca11446f95b3a3ce5d4c19ad57e52a";
+const ALGOLIA_INDEX = "netlify_085ff13f-3a74-438b-bd6f-c9295ec4a37d_main_all";
 const searchClient = algoliasearch(ALGOLIA_APP_ID, ALGOLIA_PUBLIC_KEY);
+export const algoliaIndexApi = searchClient.initIndex(ALGOLIA_INDEX);
+
 export default function Home() {
   return (
     <div className="container">
