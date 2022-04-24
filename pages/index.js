@@ -4,10 +4,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import algoliasearch from "algoliasearch/lite";
 import { InstantSearch, SearchBox, Hits } from "react-instantsearch-dom";
-const path = require("path");
-const fs = require("fs");
-const util = require("util");
-const express = require("express");
 
 const ALGOLIA_APP_ID = "QP39CFZYBC";
 const ALGOLIA_PUBLIC_KEY = "38ca11446f95b3a3ce5d4c19ad57e52a";
