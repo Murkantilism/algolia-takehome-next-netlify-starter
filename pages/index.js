@@ -22,7 +22,7 @@ export default function Home() {
           Get started by searching for a restaurant:
         </p>
         <InstantSearch
-          indexName="new-index-1650761562_query_suggestions"
+          indexName="netlify_085ff13f-3a74-438b-bd6f-c9295ec4a37d_main_all"
           searchClient={searchClient}
         >
           <SearchBox />
