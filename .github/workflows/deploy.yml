@@ -22,4 +22,3 @@ jobs:
         run: |
           npm run build
           npm run export
-          npm run dev
