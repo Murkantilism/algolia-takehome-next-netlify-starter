@@ -29,7 +29,6 @@ export default function Home() {
           <Hits />
         </InstantSearch>
       </main>
-
       <Footer />
     </div>
   );
