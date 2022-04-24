@@ -6,8 +6,8 @@ import algoliasearch from "algoliasearch/lite";
 import { InstantSearch, SearchBox, Hits } from "react-instantsearch-dom";
 
 const searchClient = algoliasearch(
-  "latency",
-  "6be0576ff61c053d5f9a3225e2a90f76"
+  process.env.ALGOLIA_APP_ID,
+  process.env.ALGOLIA_API_KEY
 );
 export default function Home() {
   return (
