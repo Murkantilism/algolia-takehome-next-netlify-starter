@@ -4,8 +4,10 @@ import { algoliaIndexApi } from "../pages/index";
 function Hit({ hits }) {
   function deleteEntry(entryId) {
     console.log("DELETE ME: ", entryId);
-    // TODO: Uncomment once using env variables to pass an admin API key
-    //algoliaIndexApi.deleteObject(entryId);
+    if (algoliaIndexApi.deleteObject) {
+      console.log("Delete method present");
+      algoliaIndexApi.deleteObject(entryId);
+    }
   }
   return (
     <>
